@@ -1,10 +1,18 @@
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import NavBar from "./components/layout/Navbar";
+import Dashboard from "./components/dashboard/Dashboard";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Plan App</h1>
-    </div>
+    <Router>
+      <div className="App">
+        <NavBar />
+        <Switch>
+          <Route path="/" component={Dashboard}/>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
